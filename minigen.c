@@ -83,7 +83,7 @@ VOID CALLBACK GenerateCompleteCallback(PVOID CallbackInfo, BOOLEAN TimerOrWaitFi
 	
 	UnregisterWait(CInfo->MyWaitObj);
 	CloseHandle(CInfo->hGenerateThread);
-	SetWindowText(CInfo->hKeyEditCtl, CInfo->Minikey);
+	SetWindowTextA(CInfo->hKeyEditCtl, CInfo->Minikey);
 	
 	CloseHandle(CInfo->hGenerateThread);
 	free(CInfo->Minikey);
